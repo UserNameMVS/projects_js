@@ -5,12 +5,40 @@
 }
 
 body {
+  background-color: #0b1727;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
   margin: 0;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  color: #d8e2ef;
+  background-color: #323c48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  transform: translateX(-400%);
+  transition: transform 0.5s ease-in;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(400%);
+  transition: transform 0.5s ease-in;
+}
+
+.box.show {
+  transform: translateX(0);
 }
